@@ -87,7 +87,7 @@ class FullPhotoActivity : AppCompatActivity(), CoroutineScope {
         this.exif = exif
         filename.text = data.name
         imageSpec.text =
-            "${((data.imageHeight * data.imageWidth) / 2000000).toDouble().roundToLong()}MP ・ ${data.imageWidth}x${data.imageHeight}px ・ ${File(
+            "${((data.imageHeight * data.imageWidth) / 1048576).toDouble().roundToLong()}MP ・ ${data.imageWidth}x${data.imageHeight}px ・ ${File(
                 data.imagePath
             ).length().HumanReadableFileSzie()}"
 
